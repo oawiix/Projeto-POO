@@ -1,12 +1,12 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <%
-    if(application.getAttribute("users") == null){
+    if (application.getAttribute("users") == null) {
         application.setAttribute("users", new java.util.ArrayList());
     }
-    
+
     java.util.ArrayList<String> users = (java.util.ArrayList) application.getAttribute("users");
-    
+
     if (request.getParameter("session-login") != null) {
         session.setAttribute("name", request.getParameter("session-name"));
         users.add((String) session.getAttribute("name"));
@@ -15,12 +15,14 @@
         int i = users.indexOf((String) session.getAttribute("name"));
         session.removeAttribute("name");
         users.remove((String) session.getAttribute("name"));
-        if(i>=0) users.remove(i);
+        if (i >= 0) {
+            users.remove(i);
+        }
         response.sendRedirect(request.getRequestURI());
     }
     String userName = (String) session.getAttribute("name");
 %>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="font-weight: 700">
     <div class="container-fluid">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
             <i class="bi bi-wrench-adjustable-circle"></i>
@@ -36,11 +38,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}/users.jsp">Usuarios</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/teste.jsp">Teste</a>
+                </li>
             </ul>
-                <% if(userName != null){ %>
+            <% if (userName != null) {%>
             <form class="d-flex">
                 <span class="navbar-text me-2">
-                    Olá, <%= userName %>
+                    Olá, <%= userName%>
                 </span>
                 <button class="btn btn-outline-success" type="submit" name="session-logout">Sair</button>
             </form> <% } %>

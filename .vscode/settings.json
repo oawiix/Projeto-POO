@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "src\\java"
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Users\\dange\\OneDrive\\Área de Trabalho\\json-20240303.jar",
+        "c:\\Users\\dange\\OneDrive\\Área de Trabalho\\javax.servlet-api-4.0.1.jar"
+    ]
+}
