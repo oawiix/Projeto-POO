@@ -44,7 +44,9 @@
                 });
         }}};
     </script>
-    <nav class="navbar navbar-expand-lg" style="background-color: rgb(238, 238, 238);font-weight: 500">
+    <% if(session.getAttribute("name") != null) 
+    { %>
+      <nav class="navbar navbar-expand-lg" style="background-color: rgb(238, 238, 238);font-weight: 500">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">MyTasks</span>
         </div>
@@ -67,6 +69,9 @@
       </table>
       </div>
       
+    <% } 
+    %>
+
 
 <%@include file="WEB-INF/jspf/html-body-libs.jspf" %>
 </body>
