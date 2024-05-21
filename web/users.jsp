@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 6 de mai. de 2024, 22:45:29
-    Author     : dange
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
