@@ -42,6 +42,7 @@ body{
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: var(--color-background);
+    
 }
 
 a{
@@ -215,8 +216,7 @@ main{
 }
 
 main .analyse{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 1.6rem;
 }
 
@@ -506,7 +506,7 @@ main .recent-orders a{
     }
 
     main .new-users .user-list .user{
-        flex-basis: 40%;
+        flex-basis: 0%;
     }
 
     main .recent-orders {
